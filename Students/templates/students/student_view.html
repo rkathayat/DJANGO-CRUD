@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student View</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        .student-info {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student View</h1>
+    <div class="student-info">
+        <strong>Name:</strong> {{ student.name }}<br>
+        <strong>Age:</strong> {{ student.age }}<br>
+        <strong>Email:</strong> {{ student.email }}<br>
+        <strong>Address:</strong> {{ student.address }}<br>
+        <strong>Gender:</strong> {{ student.get_gender_display }}
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student List</h1>
+    <ul>
+    {% for student in students %}
+        <li>
+            <strong>Name:</strong> {{ student.name }}<br>
+            <strong>Age:</strong> {{ student.age }}<br>
+            <strong>Email:</strong> {{ student.email }}<br>
+            <strong>Address:</strong> {{ student.address }}<br>
+            <strong>Gender:</strong> {{ student.get_gender_display }}
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
